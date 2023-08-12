@@ -1,13 +1,12 @@
-import { ToastProvider } from "@/providers/toast-provider";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
+import Footer from "@/components/Footer";
+import NavBar from "@/components/NavBar";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "My Doctor",
-  description: "My doctor page",
+  title: "Portfolio Marta",
+  description: "Portfolio Marta",
 };
 
 export default function RootLayout({
@@ -17,10 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {" "}
-        <ToastProvider />
+      <body>
+        <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );
