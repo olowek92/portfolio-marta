@@ -1,13 +1,13 @@
 import React from "react";
 
-const NewsPage: React.FC = () => {
+const AboutPage: React.FC = () => {
   return (
-    <section id="news-page" className="h-screen text-center flex">
+    <section id="about-page" className="h-screen text-center flex">
       <h1 className="m-auto font-waterfall text-6xl text-white-600 font-bold">
-        Aktualności
+        O Przystanku
       </h1>
     </section>
   );
 };
 
-export default NewsPage;
+export default AboutPage;

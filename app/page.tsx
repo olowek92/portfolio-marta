@@ -1,21 +1,19 @@
-import NewsPage from "./(routes)/aktualnosci/page";
-import PricingPage from "./(routes)/cennik/page";
 import ContactPage from "./(routes)/kontakt/page";
-import AboutPage from "./(routes)/o-mnie/page";
+import AboutPage from "./(routes)/o-przystanku/page";
 import ServicesPage from "./(routes)/oferta/page";
 import TermsAndConditionsPage from "./(routes)/regulamin/page";
-import CooperationPage from "./(routes)/wspolpraca/page";
+import ExpertsPage from "./(routes)/specjalisci/page";
+import BookingPage from "./(routes)/zapisy/page";
 
 export default function Home() {
   return (
     <>
-      <NewsPage />
       <AboutPage />
+      <ExpertsPage />
       <ServicesPage />
-      <PricingPage />
-      <CooperationPage />
-      <TermsAndConditionsPage />
+      <BookingPage />
       <ContactPage />
+      <TermsAndConditionsPage />
     </>
   );
 }

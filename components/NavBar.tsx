@@ -1,6 +1,8 @@
 "use client";
 
+import logoSaska from "@/public/logoSaska.png";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -14,14 +16,14 @@ function NavBar() {
 
   const routes = [
     {
-      href: `/aktualnosci`,
-      label: "Aktualności",
-      active: pathname === `/aktualnosci`,
+      href: `/o-przystanku`,
+      label: "O Przystanku",
+      active: pathname === `/o-przystanku`,
     },
     {
-      href: `/o-mnie`,
-      label: "O mnie",
-      active: pathname === `/o-mnie`,
+      href: `/specjalisci`,
+      label: "Specjaliści",
+      active: pathname === `/specjalisci`,
     },
     {
       href: `/oferta`,
@@ -29,33 +31,34 @@ function NavBar() {
       active: pathname === `/oferta`,
     },
     {
-      href: `/cennik`,
-      label: "Cennik",
-      active: pathname === `/cennik`,
-    },
-    {
-      href: `/wspolpraca`,
-      label: "Współpraca",
-      active: pathname === `/wspolpraca`,
-    },
-    {
-      href: `/regulamin`,
-      label: "Regulamin",
-      active: pathname === `/regulamin`,
+      href: `/zapisy`,
+      label: "Zapisy",
+      active: pathname === `/zapisy`,
     },
     {
       href: `/kontakt`,
       label: "Kontakt",
       active: pathname === `/kontakt`,
     },
+    {
+      href: `/regulamin`,
+      label: "Regulamin",
+      active: pathname === `/regulamin`,
+    },
   ];
 
   return (
     <nav className="w-full bg-white fixed top-0 left-0 right-0 z-10 border-b">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl lg:items-center lg:flex lg:px-8">
-        <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
+        <div className="flex items-center justify-between lg:block">
           <Link href="/" rel="preload" as="">
-            <h2 className="text-2xl text-cyan-600 font-bold ">LOGO</h2>
+            <Image
+              src={logoSaska}
+              alt="logo"
+              width={100}
+              height={100}
+              className="cursor-pointer"
+            />
           </Link>
           <div className="lg:hidden">
             <button
